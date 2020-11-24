@@ -1,38 +1,58 @@
-.App {
-  text-align: center;
+@font-face {
+    font-family: 'Grotesque';
+    font-style: normal;
+    font-weight: 400;
+    src:
+    local('Grotesque'),
+    local('Grotesque-regular'),
+    url(./font/FoundersGroteskWeb-Regular.woff2) format('woff2'),
+    url(./font/FoundersGroteskWeb-Regular.woff) format('woff');
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+    font-family: 'Grotesque', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+    font-family: 'Grotesque', 'Grotesque-regular', sans-serif;
+    max-width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+img {
+    max-width: 100%;
+    max-height: auto;
 }
 
-.App-link {
-  color: #61dafb;
+/*Header Component*/
+
+.header {
+    background-color: transparent;
+    width: 100%;
+    position: fixed;  
+    top:0;
+    height: 150px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header.start {
+    text-align: start;
+} 
+
+.end {
+    text-align: end;
 }
+
+/*Projects Component*/
+
+.projects {
+    width: 100vw;
+    position: relative;
+}
+
+.left {
+        cursor: url('./icons/Arrowleft.svg'), auto;
+}
+
+.right {
+        cursor: url('./icons/Arrowright.svg'), auto;
+}
+

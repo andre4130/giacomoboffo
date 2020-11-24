@@ -1,7 +1,8 @@
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+
+//Styling
 import './App.css';
-import React from 'react';
-import { axios } from 'axios';
-import { router } from 'react-router';
 
 //Components
 import Header from './components/header/Header';
@@ -9,12 +10,25 @@ import Projects from './components/projects/Projects';
 import About from './components/about/About';
 
 function App() {
+  const [data, setData] = useState({ projects: [], isLoaded: false });
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await axios(
+        'http://giacomoboffo/wp-json/wp/v2/projects',
+      );
+
+      setData({ projects: result.data, isLoaded: true });
+    };
+    fetchData();
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <Header/>
-        <Projects/>
-      </header>
+      <Header />
+      <Projects
+        data={data}
+      />
     </div>
   );
 }
