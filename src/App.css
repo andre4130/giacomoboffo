@@ -30,15 +30,34 @@ img {
     width: 100%;
     position: fixed;  
     top:0;
-    height: 150px;
+    height: 21px;
+    align-items: center;
+    display: flexbox;
+    justify-content: space-evenly;
 }
 
-.header.start {
-    text-align: start;
-} 
+header h1 {
+font-size: 16px;
+}
+
+header .width{
+    width: 400px !important;
+}
 
 .end {
+    display: flexbox;
     text-align: end;
+    align-items: center;
+}
+
+.link {
+    text-decoration: none;
+    color: black !important;
+}
+
+.link h1 strong:hover {
+    text-decoration: dotted !important;
+    color: rgba(0,0,0,0.3);
 }
 
 /*Projects Component*/

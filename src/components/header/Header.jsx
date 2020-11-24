@@ -1,17 +1,20 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
-        <div className="container-fluid header">
-            <div className="row">
+        <header className="container-fluid header mt-3">
+            <div className="row ml-4 mr-4">
                 <div className="col-6">
-                    <h1><strong> Header works</strong></h1>
+                    <Link className='link' to='/'>
+                    <h1><strong>Giacomo Boffo &nbsp; &nbsp; &nbsp; &nbsp; Graphic Design & Art Direction</strong></h1>   
+                    </Link>
                 </div>
                 <div className="col-6 end">
-                    <h1><strong> other section</strong></h1>
+                    <Link className="link" to='/about'><h1>About</h1></Link>
                 </div>
             </div>
-        </div>
+        </header>
     );
 };
 
