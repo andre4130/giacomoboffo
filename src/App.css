@@ -53,10 +53,14 @@ header .width{
 .link {
     text-decoration: none;
     color: black !important;
+    font: bold ;
 }
 
-.link h1 strong:hover {
-    text-decoration: dotted !important;
+.link:hover {
+    text-decoration: none;
+}
+
+.link h1:hover {
     color: rgba(0,0,0,0.3);
 }
 
