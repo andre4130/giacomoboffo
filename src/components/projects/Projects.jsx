@@ -37,7 +37,7 @@ const Projects = ({ data }) => {
                                 <img  src={project.acf.image} alt="" />
                                 <div className="">
                                 <div dangerouslySetInnerHTML={{ __html: project.excerpt.rendered }}>
-                                </div><a href={project.acf.link}>{project.id}</a>
+                                </div><a href={project.acf.link} target='_blank' rel='noreferrer'>{project.id}</a>
                                 </div>
                     
                                 

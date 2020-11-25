@@ -30,6 +30,7 @@ img {
     width: 100%;
     position: fixed;  
     top:0;
+    margin-top: 20px;
     height: 21px;
     align-items: center;
     display: flexbox;
@@ -79,3 +80,42 @@ header .width{
         cursor: url('./icons/Arrowright.svg'), auto;
 }
 
+/*About component*/
+
+.about-container {
+    margin-top: 0;
+    display: flexbox;
+}
+
+.about-section {
+    text-align: left;
+    top: 20px;
+    height: 182px;
+}
+
+.side-col {
+  
+}
+
+.cv{
+    margin-top: 50px;
+}
+
+.cv a{
+   text-decoration: none;
+   color: black; 
+}
+
+.clients{
+    margin-top: 50px;
+}
+.client-list ul {
+    list-style-type:none;
+    padding-left: 0px;
+    margin-left: 0;
+} 
+.client-list li {
+    list-style-type:none;
+    padding-left: 0;
+    margin-left: 0;
+}

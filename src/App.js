@@ -13,6 +13,7 @@ import About from './components/about/About';
 function App() {
   const [data, setData] = useState({ projects: [], isLoaded: false });
   const [about, setAbout] = useState({ about: [], isLoaded: false });
+  const [clients, setClients] = useState({ clients: [], isLoaded: false });
 
   useEffect(() => {
     const fetchData = async () => {
@@ -21,18 +22,24 @@ function App() {
       // );
 
       const urlProjects = 'http://giacomoboffo/wp-json/wp/v2/projects';
-      const urlAbout = 'http://giacomoboffo/wp-json/wp/v2/about'
+      const urlAbout = 'http://giacomoboffo/wp-json/wp/v2/about';
+      const urlClients = 'http://giacomoboffo/wp-json/wp/v2/clients'
       //if I want to access the media object, should be http://giacomoboffo/wp-json/wp/v2/media 
-      const [resProjects, resAbout] = await Promise.all([
+      const [resProjects, resAbout, resClients] = await Promise.all([
         axios(urlProjects),
-        axios(urlAbout)
+        axios(urlAbout),
+        axios(urlClients)
       ]);
 
       setData({ projects: resProjects.data, isLoaded: true });
-      setAbout({ about: resAbout.data, isLoaded: true })
+      setAbout({ about: resAbout.data, isLoaded: true });
+      setClients({ clients: resClients.data, isLoaded: true })
     };
     fetchData();
+
   }, []);
+
+  console.log(clients)
 
   return (
     <div className="App">
@@ -40,7 +47,7 @@ function App() {
       <Header />
         <Fragment>
         <Route exact path='/' component={() => <Projects data={data} about={about}/>} render={()=><Header></Header>}/>
-        <Route exact path='/about' component={() => <About data={data} about={about}/>}/>
+        <Route exact path='/about' component={() => <About clients={clients}/>}/>
         </Fragment>
       </Router>
 
