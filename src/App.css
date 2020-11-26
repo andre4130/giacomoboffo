@@ -165,8 +165,6 @@ header .width{
 
 .cv{
     margin-top: 50px;
-    margin-left: 0px;
-    padding-left: 0px;
 }
 
 .cv a{
@@ -191,4 +189,10 @@ header .width{
 }
 
 
-/* Breakpoints */
+/* Media Queries */
+
+@media only screen and (max-width: 1024px) {
+    .header {
+      position: absolute;
+    }
+  }

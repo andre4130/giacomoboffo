@@ -12,7 +12,7 @@ const About = ({ clients, experience }) => {
                     <p>After studying Visual Communication at ISIA Urbino (IT), he went on to complete a MA in Graphic Design at AKV St.Joost Breda (NL). After moving to Rotterdam, he started freelancing and collaborated with various local art and design institutions, among which Open Set. He worked as designer at Folch in Barcelona, and at La Scuola Open Source in Bari as designer in residence and researcher.
                     </p>
                     <div className="row">
-                        <div className='col-lg-6 ml-0'>
+                    <div className='col-lg-6 pl-1'>
                             <div className="col-12 cv">
                                 <h6>CONTACT & FOLLOW</h6>
                                 <p>
@@ -59,12 +59,11 @@ const About = ({ clients, experience }) => {
                                     </div>
                                 }
                             </div>
-                        </div>
                     </div>
-
                 </div>
                 <div className="col-lg-4 side-col"></div>
             </div>
+        </div>
         </div>
     );
 };
