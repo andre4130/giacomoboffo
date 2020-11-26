@@ -35,6 +35,7 @@ img {
     align-items: center;
     display: flexbox;
     justify-content: space-evenly;
+    z-index: 5;
 }
 
 header h1 {
@@ -68,8 +69,37 @@ header .width{
 /*Projects Component*/
 
 .projects {
-    width: 100vw;
     position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.carousel {
+    text-align: center;
+    margin-left: 6%;
+    margin-right: 6%;
+    width: fit-content;
+    height: fit-content;
+    max-width: 80vw;
+    max-height: 80vh;
+    max-width: 80vw;
+    max-height: 80vh;
+}
+
+.carousel-indicators {
+    display: none!important;
+}
+.carousel-control-next-icon{
+    display: none!important;
+}
+
+.carousel-control-prev-icon{
+    display: none!important;
+}
+
+.d-block {
+    max-height: 90vh;
+    max-width: auto;
 }
 
 .left {
@@ -99,6 +129,8 @@ header .width{
 
 .cv{
     margin-top: 50px;
+    margin-left: 0px;
+    padding-left: 0px;
 }
 
 .cv a{
@@ -109,10 +141,12 @@ header .width{
 .clients{
     margin-top: 50px;
 }
-.client-list ul {
+.client-list {
     list-style-type:none;
     padding-left: 0px;
     margin-left: 0;
+    display: flex;
+    flex-direction: column-reverse;
 } 
 .client-list li {
     list-style-type:none;

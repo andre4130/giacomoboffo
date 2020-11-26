@@ -1,10 +1,23 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
+
+//Dinamically changing header with the current URL
+    const location = useLocation().pathname;
+    var link = "About";
+    var toLink = "/about";
+    if (location === '/') {
+        link = "About";
+        toLink = '/about'
+    } else {
+        link = "Go back";
+        toLink = '/'
+    };
+
     return (
         <header className="container-fluid header">
-            <div className="row ml-4 mr-4">
+            <div className="row ml-3 mr-3">
                 <div className="col-5">
                     <Link className='link' to='/'>
                     <h1><strong>Giacomo Boffo &nbsp; &nbsp; &nbsp; &nbsp; Graphic Design & Art Direction</strong></h1>   
@@ -12,7 +25,7 @@ const Header = () => {
                 </div>
                 <div className="col-4"></div>
                 <div className="col-3 end">
-                    <Link className="link" to='/about'><h1><strong>About</strong></h1></Link>
+                    <Link className="link" to={toLink}><h1><strong>{link}</strong></h1></Link>
                 </div>
             </div>
         </header>
