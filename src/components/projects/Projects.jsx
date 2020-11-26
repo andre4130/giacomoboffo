@@ -27,33 +27,41 @@ const Projects = ({ data }) => {
             <div className={`container-fluid projects pt-5 ${arrow}`}
                 onMouseOver={updateMousePosition}
             >
-                <div className="row">
-                    <div className="">
-                        {/*set here the breakpoints for the scaling of the image*/}
+                    {/*set here the breakpoints for the scaling of the image*/}
                     {!data.projects.length
-                        ? <div>is loading...(here will be set the welcome container)</div>
+                        ? <div className="loading">
+                            <div className="row">
+                                <div className="col-12">
+                                <h1>Giacomo Boffo</h1>
+                                </div>
+                                <div className="col-12">
+                                <h3>Graphic Design & Art Direction</h3>
+                                </div>
+                            </div>                          
+                        </div>
                         :
-
-                        <div className={`carousel ${arrow}`}>
-                            <Carousel autoPlay={false} fade={true} interval={null}>
-                                {data.projects.map(project =>
-                                    <Carousel.Item key={project.id}>
-                                        <img
-                                            className="d-block w-100"
-                                            src={project.acf.image}
-                                            alt={project.slug}
-                                        />
-                                        <Carousel.Caption className="caption">
-                                            <p>{project.acf.project_description} {project.acf.haslink === 'Yes' ? <span>At <a href={project.acf.link} target='_blank' rel="noreferrer">{project.acf.company_name}</a></span> : null}</p>
-                                        </Carousel.Caption>
-                                    </Carousel.Item>
-                                )}
-                            </Carousel>
+                        <div className="row">
+                            <div className={`carousel ${arrow}`}>
+                                <Carousel autoPlay={false} fade={true} interval={null}>
+                                    {data.projects.map(project =>
+                                        <Carousel.Item key={project.id}>
+                                            <img
+                                                className="d-block w-100"
+                                                src={project.acf.image}
+                                                alt={project.slug}
+                                            />
+                                            <Carousel.Caption className="caption">
+                                                <p>{project.acf.project_description} {project.acf.haslink === 'Yes' ? <span>At <a href={project.acf.link} target='_blank' rel="noreferrer">{project.acf.company_name}</a></span> : null}</p>
+                                            </Carousel.Caption>
+                                        </Carousel.Item>
+                                    )}
+                                </Carousel>
+                            </div>
                         </div>
                     }
-                    </div>
-                    
-                </div>
+  
+
+
             </div>
         </Fragment>
 

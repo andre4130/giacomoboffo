@@ -58,7 +58,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-      <Header />
+        {data.isLoaded === false ? null : <Header />}
         <Fragment>
         <Route exact path='/' component={() => <Projects data={data} about={about}/>} render={()=><Header></Header>}/>
         <Route exact path='/about' component={() => <About clients={clients} experience={experience}/>}/>
