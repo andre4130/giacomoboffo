@@ -42,6 +42,9 @@ function App() {
         axios(urlExperience)
       ]);
 
+      // const res = await axios.get('http://giacomoboffo/wp-json/wp/v2/experience', {headers: {'Access-Control-Allow-Origin':'*','total_pages':'X-WP-TotalPages'}});
+      // console.log(res.data.headers['total-pages'])
+
       setData({ projects: resProjects.data, isLoaded: true });
       setAbout({ about: resAbout.data, isLoaded: true });
       setClients({...clients, clients: resClients.data, isLoaded: true });

@@ -23,6 +23,16 @@ img {
     max-height: auto;
 }
 
+a {
+    text-decoration: none;
+    color: black !important;
+}
+
+a:hover {
+    color: rgba(0,0,0,0.3) !important;
+    text-decoration: none!important;
+}
+
 /*Header Component*/
 
 .header {
@@ -74,20 +84,34 @@ header .width{
     justify-content: center;
 }
 
+
 .carousel {
     text-align: center;
     margin-left: 6%;
     margin-right: 6%;
-    width: fit-content;
-    height: fit-content;
-    max-width: 80vw;
+    max-width: 70vw;
     max-height: 80vh;
-    max-width: 80vw;
-    max-height: 80vh;
+    padding-bottom: 0;
 }
 
+.carousel-fade .carousel-item {
+    z-index: 0;
+}
+
+.carousel-control-next {
+    cursor: url('./icons/Arrowright.svg'), auto;
+    width: 75% !important;
+    right: -250px;
+}
+
+.carousel-control-prev {
+    cursor: url('./icons/Arrowleft.svg'), auto;
+    width: 75% !important;
+    left: -250px;
+}
 .carousel-indicators {
     display: none!important;
+ 
 }
 .carousel-control-next-icon{
     display: none!important;
@@ -97,9 +121,20 @@ header .width{
     display: none!important;
 }
 
+.caption {
+    position: relative;
+    top:3%;
+    left: 0%;
+    color: black;
+}
+
+.carousel-caption a{
+    cursor: pointer;
+}
+
 .d-block {
-    max-height: 90vh;
-    max-width: auto;
+    max-height: 85vh;
+    width: auto;
 }
 
 .left {
@@ -121,6 +156,7 @@ header .width{
     text-align: left;
     top: 20px;
     height: 182px;
+    padding-left: 6px;
 }
 
 .side-col {
@@ -153,3 +189,6 @@ header .width{
     padding-left: 0;
     margin-left: 0;
 }
+
+
+/* Breakpoints */
