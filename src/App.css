@@ -29,7 +29,7 @@ a {
 
 a:hover {
     color: rgba(0,0,0,0.3) !important;
-    text-decoration: none!important;
+    /* text-decoration: none!important; */
 }
 
 /*Header Component*/
@@ -63,11 +63,10 @@ header .width{
 
 .link {
     color: black !important;
-    font: bold ;
 }
 
 .link:hover {
-    text-decoration: none;
+    /* text-decoration: none; */
 }
 
 .link h1:hover {
@@ -182,12 +181,11 @@ header .width{
 }
 
 .cv a{
-   text-decoration: none;
    color: black; 
 }
 
 .clients{
-    margin-top: 50px;
+    padding-left: 0px;
 }
 .client-list {
     list-style-type:none;

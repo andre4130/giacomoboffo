@@ -1,6 +1,6 @@
 import React from 'react';
 
-const About = ({ clients, experience }) => {
+const About = ({ clients, experience, events }) => {
 
 
     return (
@@ -12,7 +12,7 @@ const About = ({ clients, experience }) => {
                     <p>After studying Visual Communication at ISIA Urbino (IT), he went on to complete a MA in Graphic Design at AKV St.Joost Breda (NL). After moving to Rotterdam, he started freelancing and collaborated with various local art and design institutions, among which Open Set. He worked as designer at Folch in Barcelona, and at La Scuola Open Source in Bari as designer in residence and researcher.
                     </p>
                     <div className="row">
-                    <div className='col-lg-6 pl-1'>
+                        <div className='col-lg-6 pl-1'>
                             <div className="col-12 cv">
                                 <h6>CONTACT & FOLLOW</h6>
                                 <p>
@@ -32,7 +32,7 @@ const About = ({ clients, experience }) => {
                                         <div className='client-list'>
                                             {experience.experience.map(work =>
                                                 <div key={work.id}>
-                                                    {work.acf.date_of_the_experience}
+                                                    {work.acf.date}
                                                     <br />
                                                     {work.acf.experience_information}
                                                     <p></p>
@@ -45,25 +45,46 @@ const About = ({ clients, experience }) => {
                         </div>
 
                         <div className="col-lg-6 clients">
-                            <h6>SELECTED CLIENTS</h6>
-                            <div className="client-list">
-                                {!clients.clients.length
-                                    ? <div>is loading...</div>
-                                    :
-                                    <div className='client-list'>
-                                        {clients.clients.map(client =>
-                                            <div key={client.id}>
-                                                {client.acf.client_name}
-                                            </div>
-                                        )}
-                                    </div>
-                                }
+                            <div className="col-12 cv">
+                                <h6>SELECTED CLIENTS</h6>
+                                <div className="client-list">
+                                    {!clients.clients.length
+                                        ? <div>is loading...</div>
+                                        :
+                                        <div className='client-list'>
+                                            {clients.clients.map(client =>
+                                                <div key={client.id}>
+                                                    {client.acf.client}
+                                                </div>
+                                            )}
+                                        </div>
+                                    }
+                                </div>
                             </div>
+                            <div className="col-12 cv">
+                                <h6>EVENTS & PRIZES</h6>
+                                <div className="client-list">
+                                    {!events.events.length
+                                        ? <div>is loading...</div>
+                                        :
+                                        <div className='client-list'>
+                                            {events.events.map(event =>
+                                                <div key={event.id}>
+                                                    {event.acf.date}
+                                                    <br />
+                                                    {event.acf.events_information}
+                                                    <p></p>
+                                                </div>
+                                            )}
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <div className="col-lg-4 side-col"></div>
                 </div>
-                <div className="col-lg-4 side-col"></div>
             </div>
-        </div>
         </div>
     );
 };

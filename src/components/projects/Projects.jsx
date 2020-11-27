@@ -47,11 +47,12 @@ const Projects = ({ data }) => {
                                         <Carousel.Item key={project.id}>
                                             <img
                                                 className="d-block w-100"
-                                                src={project.acf.image}
+                                                src={project.acf.image.url}
                                                 alt={project.slug}
                                             />
                                             <Carousel.Caption className="caption">
-                                                <p>{project.acf.project_description} {project.acf.haslink === 'Yes' ? <span>At <a href={project.acf.link} target='_blank' rel="noreferrer">{project.acf.company_name}</a></span> : null}</p>
+                                                <p>{project.acf.description}</p>
+                                                {project.acf.haslink === 'Yes' ? <span><a href={project.acf.web} target='_blank' rel="noreferrer">{project.acf.project_name}</a></span> : null}
                                             </Carousel.Caption>
                                         </Carousel.Item>
                                     )}
