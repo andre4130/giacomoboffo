@@ -12,17 +12,10 @@ import About from './components/about/About';
 
 function App() {
 
-  // useEffect(() => {
-  //   const currentPath = location.pathname;
-
-  //   console.log(currentPath)
-  // }, [location]);
-
   const [data, setData] = useState({ projects: [], isLoaded: false });
   const [about, setAbout] = useState({ about: [], isLoaded: false });
   const [clients, setClients] = useState({ clients: [], isLoaded: false });
   const [experience, setExperience] = useState({ experience: [], isLoaded: false });
-
 
   useEffect(() => {
     const fetchData = async () => {
