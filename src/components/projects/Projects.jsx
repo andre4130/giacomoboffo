@@ -24,7 +24,7 @@ const Projects = ({ data }) => {
     mousePosition.position < 0 ? arrow = 'right' : arrow = 'left';
     return (
         <Fragment>
-            <div className={`container-fluid projects pt-5 ${arrow}`}
+            <div className={`container-fluid projects ${arrow}`}
                 onMouseOver={updateMousePosition}
             >
                     {/*set here the breakpoints for the scaling of the image*/}
@@ -40,7 +40,6 @@ const Projects = ({ data }) => {
                             </div>                          
                         </div>
                         :
-                        <div className="row">
                             <div className={`carousel ${arrow}`}>
                                 <Carousel autoPlay={false} fade={true} interval={null}>
                                     {data.projects.map(project =>
@@ -52,13 +51,13 @@ const Projects = ({ data }) => {
                                             />
                                             <Carousel.Caption className="caption">
                                                 <p>{project.acf.description}</p>
-                                                {project.acf.haslink === 'Yes' ? <span><a href={project.acf.web} target='_blank' rel="noreferrer">{project.acf.project_name}</a></span> : null}
+                                                {/* {project.acf.haslink === 'Yes' ? <span><a href={project.acf.web} target='_blank' rel="noreferrer">{project.acf.project_name}</a></span> : null} */}
                                             </Carousel.Caption>
                                         </Carousel.Item>
                                     )}
                                 </Carousel>
                             </div>
-                        </div>
+              
                     }
   
 

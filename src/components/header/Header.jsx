@@ -20,7 +20,7 @@ const Header = () => {
             <div className="row ml-4 mr-4">
                 <div className="col-5">
                     <div className="row">
-                        <div className="col-lg-3">
+                        <div className="col-lg-3 no-wrap">
                             <Link className='link' to='/'>
                                 <h1>Giacomo Boffo </h1>
                             </Link>
@@ -30,7 +30,6 @@ const Header = () => {
                             <Link className='link' to='/'>
                                 <h1>Graphic Design & Art Direction</h1>
                             </Link></div>
-                        {/* <h1>Giacomo Boffo &nbsp; &nbsp; &nbsp; &nbsp; Graphic Design & Art Direction</h1>    */}
 
                     </div>
                 </div>
