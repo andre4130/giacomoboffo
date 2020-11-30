@@ -7,7 +7,7 @@ const About = ({ clients, experience, events }) => {
         <div className="container-fluid about-container">
             <div className="row">
                 <div className="col-lg-4 side-col"></div>
-                <div className="col-lg-4 ml-5 mr-5 mt-5 mt-lg-0 about-section">
+                <div className="col-lg-4 mt-5 mt-lg-0 about-section">
                     <p>Giacomo Boffo (1987) is a freelance designer and researcher who works internationally to offer graphic design services.</p>
                     <p>After studying Visual Communication at ISIA Urbino (IT), he went on to complete a MA in Graphic Design at AKV St.Joost Breda (NL). After moving to Rotterdam, he started freelancing and collaborated with various local art and design institutions, among which Open Set. He worked as designer at Folch in Barcelona, and at La Scuola Open Source in Bari as designer in residence and researcher.
                     </p>
