@@ -16,16 +16,15 @@ const Header = () => {
     };
 
     return (
-        <header className="container-fluid header">
-            <div className="row ml-4 mr-4">
-                <div className="col-5">
+        <header className="container-fluid d-flex header">
+            {/* <div className="row ml-4 mr-4">
+                <div className="name">
                     <div className="row">
-                        <div className="col-lg-3 no-wrap">
+                        <div className="col-lg-6 no-wrap">
                             <Link className='link' to='/'>
                                 <h1>Giacomo Boffo </h1>
                             </Link>
                         </div>
-
                         <div className="col-lg-6">
                             <Link className='link' to='/'>
                                 <h1>Graphic Design & Art Direction</h1>
@@ -33,12 +32,30 @@ const Header = () => {
 
                     </div>
                 </div>
-                <div className="col-4"></div>
-                <div className="col-3 end">
+                <div className="empty"></div>
+                <div className="end">
                     <Link className="link" to={toLink}><h1>{link}</h1></Link>
                 </div>
-            </div>
-        </header>
+            </div> */}
+
+            <div className="container-fluid justify-content-between d-flex flex-row header">
+                <div className="d-flex flex-md-row flex-column ml-2">
+                    <div className="mr-5">
+                        <Link className='link' to='/'>
+                            <h1>Giacomo Boffo </h1>
+                        </Link>
+                    </div>
+                    <div className="">
+                        {/* <Link className='link' to='/'> */}
+                            <h1>Graphic Design & Art Direction</h1>
+                        {/* </Link> */}
+                    </div>
+                </div>
+                <div className="">
+                    <Link className="link" to={toLink}><h1>{link}</h1></Link>
+                </div>
+            </div >
+        </header >
     );
 };
 
