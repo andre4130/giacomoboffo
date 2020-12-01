@@ -12,41 +12,40 @@ import About from './components/about/About';
 
 function App() {
 
-  const [data, setData] = useState({ projects: [], isLoaded: false });
-  const [events, setEvents] = useState({ events: [], isLoaded: false });
-  const [clients, setClients] = useState({ clients: [], isLoaded: false });
-  const [experience, setExperience] = useState({ experience: [], isLoaded: false });
+  const [data, setData] = useState({ projects: [], page: "1", totalPages: '', isLoaded: false });
+  const [events, setEvents] = useState({ events: [], page: "1", totalPages: '', isLoaded: false });
+  const [clients, setClients] = useState({ clients: [], page: "1", totalPages: '', isLoaded: false });
+  const [experience, setExperience] = useState({ experience: [], page: "1", totalPages: '', isLoaded: false });
 
   useEffect(() => {
     const fetchData = async () => {
-      const urlProjects = 'http://giacomoboffoapi/wp-json/wp/v2/projects';
-      const urlEvents = 'http://giacomoboffoapi/wp-json/wp/v2/events_prizes';
-      const urlExperience = 'http://giacomoboffoapi/wp-json/wp/v2/experience';
-      const urlClients = 'http://giacomoboffoapi/wp-json/wp/v2/clients?page=1'
-      const urlClients2 = 'http://giacomoboffoapi/wp-json/wp/v2/clients?page=2'
+      const urlProjects = `http://giacomoboffoapi/wp-json/wp/v2/projects?page=${experience.page}`;
+      const urlEvents = `http://giacomoboffoapi/wp-json/wp/v2/events_prizes?page=${experience.page}`;
+      const urlExperience = `http://giacomoboffoapi/wp-json/wp/v2/experience?page=${experience.page}`;
+      const urlClients = `http://giacomoboffoapi/wp-json/wp/v2/clients?page=${experience.page}`;
 
       //if I want to access the media object, should be http://giacomoboffoapi/wp-json/wp/v2/media 
 
-      const [resProjects, resEvents, resClients, resClients2, resExperience] = await Promise.all([
+      const [resProjects, resEvents, resClients, resExperience] = await Promise.all([
         axios(urlProjects),
         axios(urlEvents),
         axios(urlClients),
-        axios(urlClients2),
         axios(urlExperience)
       ]);
 
-      // const res = await axios.get('http://giacomoboffoapi/wp-json/wp/v2/experience', {headers: {'Access-Control-Allow-Origin': '*','total_pages':'X-WP-TotalPages'}});
-      // console.log(res.data.headers)
+      // const res = await axios.get('http://giacomoboffoapi/wp-json/wp/v2/experience', {headers: {'Access-Control-Allow-Origin': 'http://localhost:3000','total_pages':'X-WP-TotalPages'}});
 
-      setData({ projects: resProjects.data, isLoaded: true });
-      setEvents({ events: resEvents.data, isLoaded: true });
-      setClients({...clients, clients: resClients.data, isLoaded: true });
-      setClients({...clients, clients: resClients2.data, isLoaded: true });
-      setExperience({experience: resExperience.data, isLoaded: true})
+
+      setData({ ...data, projects: resProjects.data, totalPages: resProjects.headers['x-wp-totalpages'], isLoaded: true });
+      setEvents({ ...events, events: resEvents.data, totalPages: resEvents.headers['x-wp-totalpages'], isLoaded: true });
+      setClients({...clients, clients: resClients.data, totalPages: resClients.headers['x-wp-totalpages'], isLoaded: true });
+      setExperience({...experience, experience: resExperience.data, totalPages: resExperience.headers['x-wp-totalpages'], isLoaded: true})
     };
     fetchData();
 
   }, []);
+
+console.log( data, clients, experience, events)
 
   return (
     <div className="App">
