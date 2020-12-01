@@ -88,6 +88,7 @@ header .width{
     height: 100vh;
     padding-bottom: 0px; 
     align-self: center; 
+    
 }
 
 .caption {
@@ -100,19 +101,22 @@ header .width{
     text-align: center;
     margin-left: 7vw;
     margin-right: 7vw;
-    max-height: 100%;
     width: auto;
     min-width: 50%;
 }
 
 .carousel-div {
 display: flex;
-align-self: flex-end;
+align-self: center;
+max-width: 97%;
 }
 
 .carousel img {
+    /* position: absolute; */
         object-fit: scale-down;   
         align-self: center; 
+        max-height: 85vh;
+        width: auto;
     }
 
 .carousel-fade .carousel-item {
@@ -156,10 +160,6 @@ align-self: flex-end;
     cursor: pointer;
 }
 
-.d-block {
-    max-height: 85vh;
-    width: auto;
-}
 
 .left {
         cursor: url('./icons/Arrowleft.svg'), auto;
@@ -211,6 +211,14 @@ align-self: flex-end;
 
 /* Media Queries */
 
+@media only screen and (max-width: 1386px) {
+    .carousel img {
+        /* object-fit: none;    */
+        align-self: center; 
+        max-height: 70vh;
+    }
+  }
+
 @media only screen and (max-width: 1024px) {
     .header {
       position: absolute;
@@ -221,3 +229,34 @@ align-self: flex-end;
         padding-top: 30px;
     }
   }
+
+  @media only screen and (max-width: 992px) {
+    .carousel img {
+        /* object-fit: none;    */
+        align-self: center; 
+        max-height: 50vh;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .carousel {
+        text-align: center;
+        margin-left: 35px;
+        margin-right: 35px;
+        width: auto;
+        min-width: 50%;
+    }
+    .projects {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .caption {
+        height: 100px;
+        top: -30px
+    }
+
+    .header {
+        align-items: flex-start;
+        top: 5px;
+    }
+}

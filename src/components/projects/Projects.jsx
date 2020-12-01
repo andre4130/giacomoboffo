@@ -45,7 +45,7 @@ const Projects = ({ data }) => {
                             {data.projects.map(project =>
                                 <Carousel.Item key={project.id}>
                                     <img
-                                        className="d-block w-100"
+                                        className="d-block"
                                         src={project.acf.image.url}
                                         alt={project.slug}
                                     />

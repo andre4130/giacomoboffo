@@ -9,6 +9,7 @@ import './App.css';
 import Header from './components/header/Header';
 import Projects from './components/projects/Projects';
 import About from './components/about/About';
+import Testing from './components/testing/Testing'
 
 function App() {
 
@@ -19,10 +20,10 @@ function App() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const urlProjects = `http://giacomoboffoapi/wp-json/wp/v2/projects?page=${experience.page}`;
-      const urlEvents = `http://giacomoboffoapi/wp-json/wp/v2/events_prizes?page=${experience.page}`;
+      const urlProjects = `http://giacomoboffoapi/wp-json/wp/v2/projects?page=${data.page}`;
+      const urlEvents = `http://giacomoboffoapi/wp-json/wp/v2/events_prizes?page=${events.page}`;
       const urlExperience = `http://giacomoboffoapi/wp-json/wp/v2/experience?page=${experience.page}`;
-      const urlClients = `http://giacomoboffoapi/wp-json/wp/v2/clients?page=${experience.page}`;
+      const urlClients = `http://giacomoboffoapi/wp-json/wp/v2/clients?page=${clients.page}`;
 
       //if I want to access the media object, should be http://giacomoboffoapi/wp-json/wp/v2/media 
 
@@ -35,20 +36,21 @@ function App() {
 
       // const res = await axios.get('http://giacomoboffoapi/wp-json/wp/v2/experience', {headers: {'Access-Control-Allow-Origin': 'http://localhost:3000','total_pages':'X-WP-TotalPages'}});
 
-
       setData({ ...data, projects: resProjects.data, totalPages: resProjects.headers['x-wp-totalpages'], isLoaded: true });
       setEvents({ ...events, events: resEvents.data, totalPages: resEvents.headers['x-wp-totalpages'], isLoaded: true });
       setClients({...clients, clients: resClients.data, totalPages: resClients.headers['x-wp-totalpages'], isLoaded: true });
-      setExperience({...experience, experience: resExperience.data, totalPages: resExperience.headers['x-wp-totalpages'], isLoaded: true})
+      setExperience({...experience, experience: resExperience.data, totalPages: resExperience.headers['x-wp-totalpages'], isLoaded: true})   
+
     };
     fetchData();
 
   }, []);
 
-console.log( data, clients, experience, events)
+// console.log( data, clients, experience, events)
 
   return (
     <div className="App">
+      {/* <Testing/> */}
       <Router>
         {data.isLoaded === false ? null : <Header />}
         <Fragment>

@@ -18,7 +18,7 @@ const Header = () => {
     return (
         <header className="container-fluid d-flex header">
             <div className="container-fluid justify-content-between d-flex flex-row header">
-                <div className="d-flex flex-md-row flex-column">
+                <div className="d-flex flex-lg-row flex-column">
                     <div className="mr-5">
                         <Link className='link' to='/'>
                             <h1>Giacomo Boffo </h1>
