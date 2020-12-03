@@ -25,7 +25,7 @@ function App() {
         <Header />
         <Fragment>
           <Route exact path='/giacomoboffo' component={() => <Projects data={projects} />} render={() => <Header></Header>} />
-          <Route exact path='/about' component={() => <About clients={clients} experience={experience} prizes={prizes} />} />
+          <Route exact path='/giacomoboffo/about' component={() => <About clients={clients} experience={experience} prizes={prizes} />} />
         </Fragment>
       </Router>
     </div>
