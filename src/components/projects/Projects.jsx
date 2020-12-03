@@ -40,26 +40,29 @@ const Projects = ({ data }) => {
                         </div>
                     </div>
                     :
+
                     <div className={`carousel-div ${arrow}`}>
-                        <Carousel autoPlay={false} fade={true} interval={null} indicators={false}>
+
+                        <Carousel autoPlay={false} fade={false} interval={null} indicators={false}>
                             {data.projects.map(project =>
                                 <Carousel.Item key={project.id}>
                                     <img
-                                        className="d-block"
+                                        className="d-block w-100"
                                         src={project.acf.image.url}
                                         alt={project.slug}
                                     />
-                                    <div className="caption">{project.acf.description}</div>
-                                         {/* <Carousel.Caption>
+                                    <Carousel.Caption className="caption">
                                         {project.acf.description}
-                                    </Carousel.Caption> */}
+                                    </Carousel.Caption>
                                 </Carousel.Item>
-
                             )}
                         </Carousel>
                     </div>
+
                 }
+
             </div>
+
         </Fragment>
 
     )

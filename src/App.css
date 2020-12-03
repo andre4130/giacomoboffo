@@ -41,7 +41,7 @@ a:hover {
     z-index: 5;
     padding-left: 40px;
     padding-right: 40px;
-    margin-top: 5px;
+
 }
 
 header h1 {
@@ -52,8 +52,9 @@ header .width{
     width: 400px !important;
 }
 
-.link {
+header .link {
     color: black !important;
+    text-decoration: none!important;
 }
 
 .link h1:hover {
@@ -84,35 +85,53 @@ header .width{
     flex-direction: column;
     justify-content: center;
     align-items: baseline;
-    padding-top: 60px;
-    height: 100vh;
+    height:100vh;
     padding-bottom: 0px; 
-    align-self: center; 
-    
+    align-self: center;    
 }
 
 .caption {
-    display: inline-flex;
+    display: flex;
+    position: absolute;
     justify-content: center;    
-    width: 100%;
+    align-items: flex-end;
     height: 20px;
+    bottom: 0px;
+   color: black;
 }
+
+.carousel-caption{
+position: absolute;
+color: black;
+bottom: 0;
+}
+
+
 .carousel {
     text-align: center;
     margin-left: 7vw;
     margin-right: 7vw;
-    width: auto;
-    min-width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+.carousel-item {
+    height: 100%;
 }
 
 .carousel-div {
 display: flex;
 align-self: center;
-max-width: 97%;
+position: relative;
+height: calc(100vh - 60px);
+top:30px
 }
 
 .carousel img {
-    /* position: absolute; */
         object-fit: scale-down;   
         align-self: center; 
         max-height: 85vh;
@@ -146,15 +165,6 @@ max-width: 97%;
 .carousel-control-prev-icon{
     display: none!important;
 }
-
-.caption {
-    height: 60px;
-    top: -20px;
-    display: flex;
-    justify-content: center;
-    align-items: center
-}
-
 
 .carousel-caption a{
     cursor: pointer;
@@ -212,11 +222,7 @@ max-width: 97%;
 /* Media Queries */
 
 @media only screen and (max-width: 1386px) {
-    .carousel img {
-        /* object-fit: none;    */
-        align-self: center; 
-        max-height: 70vh;
-    }
+
   }
 
 @media only screen and (max-width: 1024px) {
@@ -231,14 +237,31 @@ max-width: 97%;
   }
 
   @media only screen and (max-width: 992px) {
-    .carousel img {
-        /* object-fit: none;    */
-        align-self: center; 
-        max-height: 50vh;
-    }
+  
     .header {
         align-items: flex-start;
         top: 5px;
+    }
+
+    .carousel {
+        text-align: center;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: auto;
+        min-width: 50%;
+    }
+
+    .carousel-control-next {
+        cursor: url('./icons/Arrowright.svg'), auto;
+        width: 53% !important;
+        right: -3%;
+        height: 100%;}
+    
+    .carousel-control-prev {
+        cursor: url('./icons/Arrowleft.svg'), auto;
+        width: 53% !important;
+        left: -3%;
+        height: 100%;
     }
   }
 
@@ -258,19 +281,9 @@ max-width: 97%;
         padding-right: 35px;
     }
 
-    .carousel {
-        text-align: center;
-        margin-left: 35px;
-        margin-right: 35px;
-        width: auto;
-        min-width: 50%;
-    }
     .projects {
-        padding-left: 0;
-        padding-right: 0;
+        padding-left: 10px;
+        padding-right: 10px;
     }
-    .caption {
-        height: 100px;
-        top: -30px
-    }
+  
 }
