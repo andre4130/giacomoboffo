@@ -6,8 +6,8 @@ const About = ({ clients, experience, events }) => {
     return (
         <div className="container-fluid about-container">
             <div className="row">
-                <div className="col-lg-4 side-col"></div>
-                <div className="col-lg-4 mt-5 mt-lg-0 about-section">
+                <div className="col-lg-4 col-xl-3 side-col"></div>
+                <div className="col-lg-4 col-xl-6 mt-5 mt-lg-0 ml-xl-5 about-section">
                     <p>Giacomo Boffo (1987) is a freelance designer and researcher who works internationally to offer graphic design services.</p>
                     <p>After studying Visual Communication at ISIA Urbino (IT), he went on to complete a MA in Graphic Design at AKV St.Joost Breda (NL). After moving to Rotterdam, he started freelancing and collaborated with various local art and design institutions, among which Open Set. He worked as designer at Folch in Barcelona, and at La Scuola Open Source in Bari as designer in residence and researcher.
                     </p>
@@ -82,7 +82,7 @@ const About = ({ clients, experience, events }) => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-4 side-col"></div>
+                    <div className="col-lg-4 xl-3 side-col"></div>
                 </div>
             </div>
         </div>

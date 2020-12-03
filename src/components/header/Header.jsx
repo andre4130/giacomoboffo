@@ -11,7 +11,7 @@ const Header = () => {
         link = "About";
         toLink = '/about'
     } else {
-        link = "Go back";
+        link = "Back";
         toLink = '/'
     };
 

@@ -236,9 +236,28 @@ max-width: 97%;
         align-self: center; 
         max-height: 50vh;
     }
+    .header {
+        align-items: flex-start;
+        top: 5px;
+    }
   }
 
   @media only screen and (max-width: 768px) {
+    .header{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .about-container {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .about-section {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+
     .carousel {
         text-align: center;
         margin-left: 35px;
@@ -253,10 +272,5 @@ max-width: 97%;
     .caption {
         height: 100px;
         top: -30px
-    }
-
-    .header {
-        align-items: flex-start;
-        top: 5px;
     }
 }
