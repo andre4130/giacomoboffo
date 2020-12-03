@@ -39,8 +39,8 @@ a:hover {
     display: flex;
     justify-content: space-around;
     z-index: 5;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 50px;
+    padding-right: 50px;
 
 }
 
@@ -134,7 +134,7 @@ top:30px
 .carousel img {
         object-fit: scale-down;   
         align-self: center; 
-        max-height: 85vh;
+        max-height: calc(100vh - 120px);
         width: auto;
     }
 
@@ -188,7 +188,7 @@ top:30px
 
 .about-section {
     text-align: left;
-    top: 20px;
+    top: 15px;
     height: 182px;
     padding-left: 40px;
     padding-right: 40px;
@@ -232,15 +232,25 @@ top:30px
     }
 
     .about-section {
-        padding-top: 30px;
+        padding-top: 25px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
   }
+
+  
 
   @media only screen and (max-width: 992px) {
   
     .header {
         align-items: flex-start;
         top: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .projects {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     .carousel {
@@ -266,10 +276,7 @@ top:30px
   }
 
   @media only screen and (max-width: 768px) {
-    .header{
-        padding-left: 20px;
-        padding-right: 20px;
-    }
+ 
 
     .about-container {
         padding-left: 0px;

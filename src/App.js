@@ -58,7 +58,6 @@ function App() {
         <Route exact path='/about' component={() => <About clients={clients} experience={experience} events={events}/>}/>
         </Fragment>
       </Router>
-
     </div>
   );
 }
