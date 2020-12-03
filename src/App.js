@@ -1,6 +1,5 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import axios from 'axios';
 
 //Styling
 import './App.css';
@@ -24,7 +23,7 @@ function App() {
       <Router>
         <Header />
         <Fragment>
-          <Route exact path='/giacomoboffo' component={() => <Projects data={projects} />} render={() => <Header></Header>} />
+          <Route exact path='/giacomoboffo/' component={() => <Projects data={projects} />} render={() => <Header></Header>} />
           <Route exact path='/giacomoboffo/about' component={() => <About clients={clients} experience={experience} prizes={prizes} />} />
         </Fragment>
       </Router>
