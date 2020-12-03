@@ -200,7 +200,7 @@ max-width: 97%;
     padding-left: 0px;
     margin-left: 0;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
 } 
 .client-list li {
     list-style-type:none;
@@ -236,6 +236,10 @@ max-width: 97%;
         align-self: center; 
         max-height: 50vh;
     }
+    .header {
+        align-items: flex-start;
+        top: 5px;
+    }
   }
 
   @media only screen and (max-width: 768px) {
@@ -253,10 +257,5 @@ max-width: 97%;
     .caption {
         height: 100px;
         top: -30px
-    }
-
-    .header {
-        align-items: flex-start;
-        top: 5px;
     }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const About = ({ clients, experience, events }) => {
+const About = ({ clients, experience, prizes }) => {
 
 
     return (
@@ -26,15 +26,15 @@ const About = ({ clients, experience, events }) => {
                             <div className="col-12 cv">
                                 <h6>WORK & TEACHING EXPERIENCE, STUDIES</h6>
                                 <div className="client-list">
-                                    {!experience.experience.length
+                                    {!experience.length
                                         ? <div>is loading...</div>
                                         :
                                         <div className='client-list'>
-                                            {experience.experience.map(work =>
-                                                <div key={work.id}>
-                                                    {work.acf.date}
+                                            {experience.map(work =>
+                                                <div key={work.date}>
+                                                    {work.date}
                                                     <br />
-                                                    {work.acf.experience_information}
+                                                    {work.experience}
                                                     <p></p>
                                                 </div>
                                             )}
@@ -48,31 +48,25 @@ const About = ({ clients, experience, events }) => {
                             <div className="col-12 cv">
                                 <h6>SELECTED CLIENTS</h6>
                                 <div className="client-list">
-                                    {!clients.clients.length
-                                        ? <div>is loading...</div>
-                                        :
-                                        <div className='client-list'>
-                                            {clients.clients.map(client =>
-                                                <div key={client.id}>
-                                                    {client.acf.client}
-                                                </div>
-                                            )}
-                                        </div>
-                                    }
+                                    <div className='client-list'>
+                                        {clients.map(client => 
+                                            <div>{client.client}</div>
+                                        )}
+                                    </div>
                                 </div>
                             </div>
                             <div className="col-12 cv">
                                 <h6>EVENTS & PRIZES</h6>
                                 <div className="client-list">
-                                    {!events.events.length
+                                    {!prizes.length
                                         ? <div>is loading...</div>
                                         :
                                         <div className='client-list'>
-                                            {events.events.map(event =>
-                                                <div key={event.id}>
-                                                    {event.acf.date}
+                                            {prizes.map(event =>
+                                                <div key={event.date}>
+                                                    {event.date}
                                                     <br />
-                                                    {event.acf.events_information}
+                                                    {event.prize}
                                                     <p></p>
                                                 </div>
                                             )}

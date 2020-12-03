@@ -28,7 +28,7 @@ const Projects = ({ data }) => {
                 onMouseOver={updateMousePosition}
             >
                 {/*set here the breakpoints for the scaling of the image*/}
-                {!data.projects.length
+                {!data.length
                     ? <div className="loading">
                         <div className="row">
                             <div className="col-12">
@@ -42,14 +42,14 @@ const Projects = ({ data }) => {
                     :
                     <div className={`carousel-div ${arrow}`}>
                         <Carousel autoPlay={false} fade={true} interval={null} indicators={false}>
-                            {data.projects.map(project =>
+                            {data.map(project =>
                                 <Carousel.Item key={project.id}>
                                     <img
                                         className="d-block"
-                                        src={project.acf.image.url}
+                                        src={project.image.default}
                                         alt={project.slug}
                                     />
-                                    <div className="caption">{project.acf.description}</div>
+                                    <div className="caption">{project.description}</div>
                                          {/* <Carousel.Caption>
                                         {project.acf.description}
                                     </Carousel.Caption> */}

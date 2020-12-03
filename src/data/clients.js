@@ -1,0 +1,21 @@
+export const clients = [
+    { "client": "Hermanos Vinagre" },
+    { "client": "Barcelona Design Week" },
+    { "client": "Marset" },
+    { "client": "Dream Magazine" },
+    { "client": "Fidedivo Orchestra London" },
+    { "client": "Conversas Barcelona" },
+    { "client": "Fundación Arquia" },
+    { "client": "La Capella Barcelona" },
+    { "client": "Vitra" },
+    { "client": "Open Set" },
+    { "client": "Witte de With Center for Contemporary Art" },
+    { "client": "Flos" },
+    { "client": "Underbau" },
+    { "client": "AKV St.Joost" },
+    { "client": "Iittala" },
+    { "client": "Podivform" },
+    { "client": "Lava Amsterdam" },
+    { "client": "Secret Art Cinema Festival Rotterdam" },
+    { "client": "Teatro Off Bari" }
+]
