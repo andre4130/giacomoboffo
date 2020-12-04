@@ -1,9 +1,8 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router';
-import { Carousel } from 'react-bootstrap'
-
-
+import { Carousel } from 'react-bootstrap';
+import { CSSTransition } from 'react-transition-group';
 
 const Projects = ({ data }) => {
 
@@ -27,9 +26,14 @@ const Projects = ({ data }) => {
             <div className={`container-fluid projects ${arrow}`}
                 onMouseOver={updateMousePosition}
             >
-                {/*set here the breakpoints for the scaling of the image*/}
                 {!data.projects.length
-                    ? <div className="loading">
+                    ?
+                    <CSSTransition
+                    in={data.isLoaded}
+                    timeout={2000}
+                    className="loading"
+                    >
+                  <div className="loading">
                         <div className="row">
                             <div className="col-12">
                                 <h1>Giacomo Boffo</h1>
@@ -39,8 +43,14 @@ const Projects = ({ data }) => {
                             </div>
                         </div>
                     </div>
+                
+                    </CSSTransition>
                     :
-
+                    // <CSSTransition
+                    // in={data.isLoaded}
+                    // timeout={1000}
+                    // className='carousel-div'
+                    // >
                     <div className={`carousel-div ${arrow}`}>
 
                         <Carousel autoPlay={false} fade={false} interval={null} indicators={false}>
@@ -58,7 +68,7 @@ const Projects = ({ data }) => {
                             )}
                         </Carousel>
                     </div>
-
+                    // </CSSTransition>
                 }
 
             </div>

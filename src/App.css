@@ -75,6 +75,7 @@
             margin-top: -50px;
             text-justify: auto;
             text-align: center;
+            animation: fadeout 5s;
         }
 
         /*Projects Component*/
@@ -87,7 +88,8 @@
             align-items: baseline;
             height:100vh;
             padding-bottom: 0px; 
-            align-self: center;    
+            align-self: center;  
+            animation: fadein 2s;  
         }
 
         .caption {
@@ -180,6 +182,34 @@
                 cursor: url('./icons/Arrowright.svg'), auto;
         }
 
+        /* Projects Animation */
+
+        .loading-exit{
+            opacity: 1;
+        }
+
+        .loading-exit-active {
+            opacity: 0.5;
+            transition: opacity 5000ms;
+        }
+
+        .loading-exit-done {
+            opacity: 0;
+        }
+
+        .carousel-div-enter{
+            opacity: 0;
+        }
+
+        .carousel-div-enter-active {
+            opacity: 0.5;
+            transition: opacity 1000ms;
+        }
+
+        .carousel-div-enter-done {
+            opacity: 1;
+        }
+
         /*About component*/
 
         .about-container {
@@ -193,6 +223,7 @@
             height: 182px;
             padding-left: 40px;
             padding-right: 40px;
+            animation: fadein 0.5s;   
         }
 
         .cv{
@@ -219,6 +250,30 @@
             margin-left: 0;
         }
 
+        /* Animation */
+
+        @keyframes fadeout {
+            from {
+                opacity:1;
+            }
+            to {
+                opacity:0;
+            }
+        }
+
+        @keyframes fadein {
+            from {
+                opacity:0;
+            }
+            to {
+                opacity:1;
+            }
+        }
+
+        
+
+
+    
 
         /* Media Queries */
 
