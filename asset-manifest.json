@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/giacomoboffo/static/css/main.45ce87c5.chunk.css",
+    "main.css": "/giacomoboffo/static/css/main.5a338de3.chunk.css",
     "main.js": "/giacomoboffo/static/js/main.322d2586.chunk.js",
     "main.js.map": "/giacomoboffo/static/js/main.322d2586.chunk.js.map",
     "runtime-main.js": "/giacomoboffo/static/js/runtime-main.4877c52f.js",
@@ -8,7 +8,7 @@
     "static/js/2.d4a31237.chunk.js": "/giacomoboffo/static/js/2.d4a31237.chunk.js",
     "static/js/2.d4a31237.chunk.js.map": "/giacomoboffo/static/js/2.d4a31237.chunk.js.map",
     "index.html": "/giacomoboffo/index.html",
-    "static/css/main.45ce87c5.chunk.css.map": "/giacomoboffo/static/css/main.45ce87c5.chunk.css.map",
+    "static/css/main.5a338de3.chunk.css.map": "/giacomoboffo/static/css/main.5a338de3.chunk.css.map",
     "static/js/2.d4a31237.chunk.js.LICENSE.txt": "/giacomoboffo/static/js/2.d4a31237.chunk.js.LICENSE.txt",
     "static/media/App.css": "/giacomoboffo/static/media/FoundersGroteskWeb-Regular.9845064f.woff",
     "static/media/Giacomo-Boffo-Brand-XY+.jpg": "/giacomoboffo/static/media/Giacomo-Boffo-Brand-XY+.24046d17.jpg",
@@ -31,7 +31,7 @@
   "entrypoints": [
     "static/js/runtime-main.4877c52f.js",
     "static/js/2.d4a31237.chunk.js",
-    "static/css/main.45ce87c5.chunk.css",
+    "static/css/main.5a338de3.chunk.css",
     "static/js/main.322d2586.chunk.js"
   ]
 }
