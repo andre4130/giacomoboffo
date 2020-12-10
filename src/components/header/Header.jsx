@@ -3,16 +3,31 @@ import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
 
+    //route to gh-pages
+    // "homepage": "http://andre4130.github.io/giacomoboffo",
+
     //Dinamically changing header with the current URL
     const location = useLocation().pathname;
     var link = "About";
-    var toLink = "/giacomoboffo/about";
-    if (location === '/giacomoboffo/') {
+
+    //github pages routing
+    // var toLink = "/giacomoboffo/about";
+    // if (location === '/giacomoboffo/') {
+    //     link = "About";
+    //     toLink = '/giacomoboffo/about'
+    // } else {
+    //     link = "Back";
+    //     toLink = '/giacomoboffo/'
+    // };
+
+    //final production routing
+    var toLink = "/about";
+    if (location === '/') {
         link = "About";
-        toLink = '/giacomoboffo/about'
+        toLink = '/about'
     } else {
-        link = "Go back";
-        toLink = '/giacomoboffo/'
+        link = "Back";
+        toLink = '/'
     };
 
     console.log(location)
@@ -25,9 +40,9 @@ const Header = () => {
                             <h1>Giacomo Boffo </h1>
                         </Link>
                     </div>
-                    <div className="">
+                    <div className="graphic">
                         {/* <Link className='link' to='/'> */}
-                            <h1>Graphic Design & Art Direction</h1>
+                        <h1>Graphic Design & Art Direction</h1>
                         {/* </Link> */}
                     </div>
                 </div>
