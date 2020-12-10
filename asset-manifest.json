@@ -1,24 +1,37 @@
 {
   "files": {
-    "main.css": "/giacomoboffo/static/css/main.0e1d49a9.chunk.css",
-    "main.js": "/giacomoboffo/static/js/main.a56a086b.chunk.js",
-    "main.js.map": "/giacomoboffo/static/js/main.a56a086b.chunk.js.map",
+    "main.css": "/giacomoboffo/static/css/main.eaf0178b.chunk.css",
+    "main.js": "/giacomoboffo/static/js/main.9af949ee.chunk.js",
+    "main.js.map": "/giacomoboffo/static/js/main.9af949ee.chunk.js.map",
     "runtime-main.js": "/giacomoboffo/static/js/runtime-main.4877c52f.js",
     "runtime-main.js.map": "/giacomoboffo/static/js/runtime-main.4877c52f.js.map",
-    "static/js/2.afc8d0c1.chunk.js": "/giacomoboffo/static/js/2.afc8d0c1.chunk.js",
-    "static/js/2.afc8d0c1.chunk.js.map": "/giacomoboffo/static/js/2.afc8d0c1.chunk.js.map",
+    "static/js/2.d4a31237.chunk.js": "/giacomoboffo/static/js/2.d4a31237.chunk.js",
+    "static/js/2.d4a31237.chunk.js.map": "/giacomoboffo/static/js/2.d4a31237.chunk.js.map",
     "index.html": "/giacomoboffo/index.html",
-    "static/css/main.0e1d49a9.chunk.css.map": "/giacomoboffo/static/css/main.0e1d49a9.chunk.css.map",
-    "static/js/2.afc8d0c1.chunk.js.LICENSE.txt": "/giacomoboffo/static/js/2.afc8d0c1.chunk.js.LICENSE.txt",
+    "static/css/main.eaf0178b.chunk.css.map": "/giacomoboffo/static/css/main.eaf0178b.chunk.css.map",
+    "static/js/2.d4a31237.chunk.js.LICENSE.txt": "/giacomoboffo/static/js/2.d4a31237.chunk.js.LICENSE.txt",
     "static/media/App.css": "/giacomoboffo/static/media/FoundersGroteskWeb-Regular.9845064f.woff",
+    "static/media/Giacomo-Boffo-Brand-XY+.jpg": "/giacomoboffo/static/media/Giacomo-Boffo-Brand-XY+.24046d17.jpg",
+    "static/media/Giacomo-Boffo-Conversas-Barcelona-1.jpg": "/giacomoboffo/static/media/Giacomo-Boffo-Conversas-Barcelona-1.a27b7702.jpg",
+    "static/media/Giacomo-Boffo-Fanny-Hagmeier-1.jpg": "/giacomoboffo/static/media/Giacomo-Boffo-Fanny-Hagmeier-1.98d5ab0c.jpg",
+    "static/media/Giacomo-Boffo-Hermanos-Vinagre-1.jpg": "/giacomoboffo/static/media/Giacomo-Boffo-Hermanos-Vinagre-1.7b15a53f.jpg",
+    "static/media/Giacomo-Boffo-Ieke-Trinks-1.jpg": "/giacomoboffo/static/media/Giacomo-Boffo-Ieke-Trinks-1.c3c408f4.jpg",
+    "static/media/Giacomo-Boffo-Manta-Poster.jpg": "/giacomoboffo/static/media/Giacomo-Boffo-Manta-Poster.5fc19b11.jpg",
+    "static/media/Giacomo-Boffo-Marset-Catalogue-1.jpg": "/giacomoboffo/static/media/Giacomo-Boffo-Marset-Catalogue-1.c42188a5.jpg",
+    "static/media/Giacomo-Boffo-Podere-Tranche-1.jpg": "/giacomoboffo/static/media/Giacomo-Boffo-Podere-Tranche-1.2cf60be9.jpg",
+    "static/media/Giacomo-Boffo-Romain-Du-Fou.jpg": "/giacomoboffo/static/media/Giacomo-Boffo-Romain-Du-Fou.71d1b7c1.jpg",
+    "static/media/Giacomo-Boffo-Runroom.jpg": "/giacomoboffo/static/media/Giacomo-Boffo-Runroom.48692c0b.jpg",
+    "static/media/Giacomo-Boffo-Samizbar-1.jpg": "/giacomoboffo/static/media/Giacomo-Boffo-Samizbar-1.881c2301.jpg",
+    "static/media/Giacomo-Boffo-Secret-Art-Cinema.jpg": "/giacomoboffo/static/media/Giacomo-Boffo-Secret-Art-Cinema.ade05b6e.jpg",
+    "static/media/Giacomo-Boffo-St.Joost-Catalog-Transversal-Dialectics.jpg": "/giacomoboffo/static/media/Giacomo-Boffo-St.Joost-Catalog-Transversal-Dialectics.b46b02b2.jpg",
+    "static/media/Giacomo-Boffo-Valentina-Barucci-1.jpg": "/giacomoboffo/static/media/Giacomo-Boffo-Valentina-Barucci-1.73c2c219.jpg",
     "static/media/GiacomoBoffo_BarcelonaDesignWeek_1.jpg": "/giacomoboffo/static/media/GiacomoBoffo_BarcelonaDesignWeek_1.190e1778.jpg",
-    "static/media/GiacomoBoffo_NachoAlegre_1.jpg": "/giacomoboffo/static/media/GiacomoBoffo_NachoAlegre_1.5029cc77.jpg",
-    "static/media/GiacomoBoffo_PodereTranche_1.jpg": "/giacomoboffo/static/media/GiacomoBoffo_PodereTranche_1.273b976e.jpg"
+    "static/media/GiacomoBoffo_NachoAlegre_1.jpg": "/giacomoboffo/static/media/GiacomoBoffo_NachoAlegre_1.5029cc77.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.4877c52f.js",
-    "static/js/2.afc8d0c1.chunk.js",
-    "static/css/main.0e1d49a9.chunk.css",
-    "static/js/main.a56a086b.chunk.js"
+    "static/js/2.d4a31237.chunk.js",
+    "static/css/main.eaf0178b.chunk.css",
+    "static/js/main.9af949ee.chunk.js"
   ]
 }
