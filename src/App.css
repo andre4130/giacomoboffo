@@ -15,12 +15,17 @@ body {
     font-family: 'Grotesque', 'Grotesque-regular', sans-serif;
     max-width: 100%;
     min-height: 100vh;
+    min-height: -moz-available;
     min-height: -webkit-fill-available;
+    min-height: fill-available;
 }
 
 html {
     font-family: 'Grotesque', sans-serif;
+    min-height: 100vh;
+    height: -moz-available;
     height: -webkit-fill-available;
+    height: fill-available;
 }
 
 a {
@@ -91,7 +96,7 @@ header .link {
     flex-direction: column;
     justify-content: center;
     align-items: baseline;
-    height:100vh;
+    min-height:100vh;
     padding-bottom: 0px; 
     align-self: center;  
 }
