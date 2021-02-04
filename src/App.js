@@ -57,6 +57,7 @@ function App() {
         <Route exact path='/' component={() => <Projects data={data}/>} render={()=><Header></Header>}/>
         <Route exact path='/about' component={() => <About clients={clients} experience={experience} events={events}/>}/>
         </Fragment>
+        <Testing></Testing>
       </Router>
     </div>
   );

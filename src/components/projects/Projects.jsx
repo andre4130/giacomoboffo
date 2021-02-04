@@ -68,7 +68,6 @@ const Projects = ({ data }) => {
                             )}
                         </Carousel>
                     </div>
-                    // </CSSTransition>
                 }
 
             </div>
