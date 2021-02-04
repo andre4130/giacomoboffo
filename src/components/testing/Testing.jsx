@@ -8,7 +8,17 @@ const Testing = () => {
     const fetchData = async () => {
       console.log("first function", testing);
       const urlProjects = `http://giacomoboffoapi/wp-json/wp/v2/experience?page=1`;
-      const [resTesting] = await Promise.all([axios(urlProjects)]);
+      const [resTesting] = await Promise.all([
+        axios(urlProjects),
+        {
+          method: "GET",
+          mode: "no-cors",
+          headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Content-Type": "application/json",
+          },
+        },
+      ]);
       let totalPages = resTesting.headers["x-wp-totalpages"];
       fillArray(totalPages);
     };
